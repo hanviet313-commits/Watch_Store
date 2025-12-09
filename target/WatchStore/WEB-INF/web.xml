@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         version="3.1" metadata-complete="false">
+  <display-name>WatchStore</display-name>
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+  <welcome-file-list>
+    <welcome-file>/</welcome-file>
+  </welcome-file-list>
+  
+  <!-- Cấu hình cho phép truy cập thư mục img_Url -->
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>/img_Url/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Không cần định nghĩa servlet nếu đã sử dụng annotation @WebServlet -->
+  <!-- 
+  <servlet>
+    <servlet-name>HuyDonHangServlet</servlet-name>
+    <servlet-class>com.watchstore.controller.HuyDonHangServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HuyDonHangServlet</servlet-name>
+    <url-pattern>/huy-don-hang</url-pattern>
+  </servlet-mapping>
+  -->
+</web-app>
+

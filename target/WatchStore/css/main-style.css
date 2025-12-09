@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+:root {
+  --main-red: #D0021B;
+  --main-white: #fff;
+  --main-dark: #222;
+  --main-gray: #f8f9fa;
+  --main-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  --main-radius: 18px;
+}
+body {
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  background: var(--main-gray);
+  color: var(--main-dark);
+}
+.navbar {
+  background: var(--main-white) !important;
+  box-shadow: var(--main-shadow);
+  border-radius: 0 0 var(--main-radius) var(--main-radius);
+}
+.navbar-brand {
+  color: var(--main-red) !important;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+.nav-link {
+  color: var(--main-dark) !important;
+  font-weight: 600;
+  border-radius: var(--main-radius);
+  transition: background 0.2s, color 0.2s;
+}
+.nav-link:hover, .nav-link.active {
+  background: var(--main-red);
+  color: var(--main-white) !important;
+}
+.btn-main {
+  background: linear-gradient(90deg, #D0021B 60%, #ff4d4d 100%);
+  color: #fff;
+  border: none;
+  border-radius: var(--main-radius);
+  font-weight: 600;
+  transition: box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(208,2,27,0.08);
+}
+.btn-main:hover {
+  background: linear-gradient(90deg, #ff4d4d 0%, #D0021B 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(208,2,27,0.15);
+}
+.product-card {
+  border-radius: var(--main-radius);
+  box-shadow: var(--main-shadow);
+  transition: box-shadow 0.25s, transform 0.2s;
+  background: #fff;
+  overflow: hidden;
+}
+.product-card:hover {
+  box-shadow: 0 8px 32px rgba(208,2,27,0.12);
+  transform: translateY(-4px) scale(1.03);
+}
+.card-img-top {
+  object-fit: cover;
+  height: 220px;
+  border-radius: var(--main-radius) var(--main-radius) 0 0;
+  transition: filter 0.2s;
+}
+.product-card:hover .card-img-top {
+  filter: brightness(0.95) saturate(1.2);
+}
+footer {
+  background: var(--main-red);
+  color: #fff;
+  border-radius: var(--main-radius) var(--main-radius) 0 0;
+  margin-top: 60px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 32px 0 0 0;
+}
+.footer-col {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+.footer-social a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-right: 12px;
+  transition: color 0.2s;
+}
+.footer-social a:hover {
+  color: #ffe082;
+}
+@media (max-width: 768px) {
+  .footer-content { flex-direction: column; gap: 12px; }
+} 
